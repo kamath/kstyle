@@ -1,0 +1,53 @@
+import { Meta } from "@storybook/addon-docs/blocks"
+
+<Meta title="Overview" />
+
+# @workspace/ui
+
+The component library behind **kamath.style** — shadcn's `base-nova` style on top of
+[Base UI](https://base-ui.com), Tailwind v4 and Geist.
+
+Every component in `src/components` has a story in `src/stories`, one file per component.
+
+## Conventions worth knowing
+
+These differ from the Radix-based shadcn you may be used to.
+
+### `render` instead of `asChild`
+
+Base UI composes through a `render` prop that takes an element, not a boolean:
+
+```tsx
+<DialogTrigger render={<Button variant="outline" />}>Open</DialogTrigger>
+```
+
+### Positioning props live on the content
+
+`side`, `sideOffset`, `align` and `alignOffset` are accepted by `PopoverContent`,
+`TooltipContent`, `DropdownMenuContent` and friends, which forward them to the
+underlying positioner.
+
+### `data-icon` tightens padding
+
+Buttons, badges and toggles shrink the padding on whichever side carries an icon:
+
+```tsx
+<Button>
+  <DownloadIcon data-icon="inline-start" />
+  Download
+</Button>
+```
+
+### State comes from `data-*` attributes
+
+Styling hooks are `data-open`, `data-checked`, `data-active`, `data-highlighted`
+and so on — not `data-state="open"`.
+
+## Theming
+
+Colors are OKLCH custom properties defined in `src/styles/globals.css` under
+`:root` and `.dark`. The **Theme** toolbar control above switches the canvas
+between light, dark and a side-by-side view of both.
+
+Because the `dark` variant is `&:is(.dark *)`, the class has to sit on an
+*ancestor* of the component — the story decorator handles that for you.
