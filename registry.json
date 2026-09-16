@@ -1,0 +1,1459 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "kstyle",
+  "homepage": "https://github.com/kamath/kstyle",
+  "items": [
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "Accordion component.",
+      "files": [
+        {
+          "path": "registry/ui/accordion.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/accordion.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "Alert component.",
+      "files": [
+        {
+          "path": "registry/ui/alert.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert Dialog",
+      "description": "Alert Dialog component.",
+      "files": [
+        {
+          "path": "registry/ui/alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/alert-dialog.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "aspect-ratio",
+      "type": "registry:ui",
+      "title": "Aspect Ratio",
+      "description": "Aspect Ratio component.",
+      "files": [
+        {
+          "path": "registry/ui/aspect-ratio.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/aspect-ratio.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "attachment",
+      "type": "registry:ui",
+      "title": "Attachment",
+      "description": "Attachment component.",
+      "files": [
+        {
+          "path": "registry/ui/attachment.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/attachment.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Avatar component.",
+      "files": [
+        {
+          "path": "registry/ui/avatar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/avatar.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Badge component.",
+      "files": [
+        {
+          "path": "registry/ui/badge.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/badge.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "Breadcrumb component.",
+      "files": [
+        {
+          "path": "registry/ui/breadcrumb.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/breadcrumb.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "bubble",
+      "type": "registry:ui",
+      "title": "Bubble",
+      "description": "Bubble component.",
+      "files": [
+        {
+          "path": "registry/ui/bubble.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/bubble.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Button component.",
+      "files": [
+        {
+          "path": "registry/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Button Group",
+      "description": "Button Group component.",
+      "files": [
+        {
+          "path": "registry/ui/button-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/button-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "separator",
+        "theme"
+      ]
+    },
+    {
+      "name": "calendar",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "Calendar component.",
+      "files": [
+        {
+          "path": "registry/ui/calendar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/calendar.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn",
+        "lucide-react",
+        "react-day-picker"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Card component.",
+      "files": [
+        {
+          "path": "registry/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/card.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "description": "Carousel component.",
+      "files": [
+        {
+          "path": "registry/ui/carousel.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/carousel.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn",
+        "embla-carousel-react",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Chart component.",
+      "files": [
+        {
+          "path": "registry/ui/chart.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/chart.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn",
+        "recharts"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Checkbox component.",
+      "files": [
+        {
+          "path": "registry/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/checkbox.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "Collapsible component.",
+      "files": [
+        {
+          "path": "registry/ui/collapsible.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/collapsible.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "Combobox component.",
+      "files": [
+        {
+          "path": "registry/ui/combobox.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/combobox.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "input-group",
+        "theme"
+      ]
+    },
+    {
+      "name": "command",
+      "type": "registry:ui",
+      "title": "Command",
+      "description": "Command component.",
+      "files": [
+        {
+          "path": "registry/ui/command.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/command.tsx"
+        }
+      ],
+      "dependencies": [
+        "cmdk",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "dialog",
+        "input-group",
+        "theme"
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context Menu",
+      "description": "Context Menu component.",
+      "files": [
+        {
+          "path": "registry/ui/context-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/context-menu.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "Dialog component.",
+      "files": [
+        {
+          "path": "registry/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dialog.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "direction",
+      "type": "registry:ui",
+      "title": "Direction",
+      "description": "Direction component.",
+      "files": [
+        {
+          "path": "registry/ui/direction.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/direction.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "Drawer component.",
+      "files": [
+        {
+          "path": "registry/ui/drawer.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/drawer.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu",
+      "description": "Dropdown Menu component.",
+      "files": [
+        {
+          "path": "registry/ui/dropdown-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/dropdown-menu.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "description": "Empty component.",
+      "files": [
+        {
+          "path": "registry/ui/empty.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/empty.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Field component.",
+      "files": [
+        {
+          "path": "registry/ui/field.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/field.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "label",
+        "separator",
+        "theme"
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover Card",
+      "description": "Hover Card component.",
+      "files": [
+        {
+          "path": "registry/ui/hover-card.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/hover-card.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Input component.",
+      "files": [
+        {
+          "path": "registry/ui/input.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "Input Group component.",
+      "files": [
+        {
+          "path": "registry/ui/input-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "textarea",
+        "theme"
+      ]
+    },
+    {
+      "name": "input-otp",
+      "type": "registry:ui",
+      "title": "Input Otp",
+      "description": "Input Otp component.",
+      "files": [
+        {
+          "path": "registry/ui/input-otp.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/input-otp.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn",
+        "input-otp",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "title": "Item",
+      "description": "Item component.",
+      "files": [
+        {
+          "path": "registry/ui/item.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/item.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "separator",
+        "theme"
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Kbd component.",
+      "files": [
+        {
+          "path": "registry/ui/kbd.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/kbd.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "Label component.",
+      "files": [
+        {
+          "path": "registry/ui/label.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/label.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "marker",
+      "type": "registry:ui",
+      "title": "Marker",
+      "description": "Marker component.",
+      "files": [
+        {
+          "path": "registry/ui/marker.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/marker.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "Menubar component.",
+      "files": [
+        {
+          "path": "registry/ui/menubar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/menubar.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "dropdown-menu",
+        "theme"
+      ]
+    },
+    {
+      "name": "message",
+      "type": "registry:ui",
+      "title": "Message",
+      "description": "Message component.",
+      "files": [
+        {
+          "path": "registry/ui/message.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/message.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "message-scroller",
+      "type": "registry:ui",
+      "title": "Message Scroller",
+      "description": "Message Scroller component.",
+      "files": [
+        {
+          "path": "registry/ui/message-scroller.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/message-scroller.tsx"
+        }
+      ],
+      "dependencies": [
+        "@shadcn/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "native-select",
+      "type": "registry:ui",
+      "title": "Native Select",
+      "description": "Native Select component.",
+      "files": [
+        {
+          "path": "registry/ui/native-select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/native-select.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "navigation-menu",
+      "type": "registry:ui",
+      "title": "Navigation Menu",
+      "description": "Navigation Menu component.",
+      "files": [
+        {
+          "path": "registry/ui/navigation-menu.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/navigation-menu.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Pagination component.",
+      "files": [
+        {
+          "path": "registry/ui/pagination.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/pagination.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Popover component.",
+      "files": [
+        {
+          "path": "registry/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/popover.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "Progress component.",
+      "files": [
+        {
+          "path": "registry/ui/progress.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/progress.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "questionnaire",
+      "type": "registry:ui",
+      "title": "Questionnaire",
+      "description": "Questionnaire component.",
+      "files": [
+        {
+          "path": "registry/ui/questionnaire.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/questionnaire.tsx"
+        }
+      ],
+      "dependencies": [
+        "@shadcn/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio Group",
+      "description": "Radio Group component.",
+      "files": [
+        {
+          "path": "registry/ui/radio-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/radio-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:ui",
+      "title": "Resizable",
+      "description": "Resizable component.",
+      "files": [
+        {
+          "path": "registry/ui/resizable.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/resizable.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn",
+        "react-resizable-panels"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll Area",
+      "description": "Scroll Area component.",
+      "files": [
+        {
+          "path": "registry/ui/scroll-area.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/scroll-area.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Select component.",
+      "files": [
+        {
+          "path": "registry/ui/select.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/select.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "Separator component.",
+      "files": [
+        {
+          "path": "registry/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/separator.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Sheet",
+      "description": "Sheet component.",
+      "files": [
+        {
+          "path": "registry/ui/sheet.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sheet.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "sidebar",
+      "type": "registry:ui",
+      "title": "Sidebar",
+      "description": "Sidebar component.",
+      "files": [
+        {
+          "path": "registry/ui/sidebar.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/sidebar.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "separator",
+        "sheet",
+        "skeleton",
+        "theme",
+        "tooltip",
+        "use-mobile"
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Skeleton component.",
+      "files": [
+        {
+          "path": "registry/ui/skeleton.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/skeleton.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Slider component.",
+      "files": [
+        {
+          "path": "registry/ui/slider.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/slider.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "Spinner component.",
+      "files": [
+        {
+          "path": "registry/ui/spinner.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/spinner.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "Switch component.",
+      "files": [
+        {
+          "path": "registry/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/switch.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table",
+      "description": "Table component.",
+      "files": [
+        {
+          "path": "registry/ui/table.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/table.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Tabs component.",
+      "files": [
+        {
+          "path": "registry/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tabs.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Textarea component.",
+      "files": [
+        {
+          "path": "registry/ui/textarea.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/textarea.tsx"
+        }
+      ],
+      "dependencies": [
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "theme",
+      "type": "registry:theme",
+      "title": "kstyle Theme",
+      "description": "Design tokens: surface fills in place of borders, square corners, and the interior palette surfaces re-bind for their contents.",
+      "cssVars": {
+        "theme": {
+          "font-heading": "var(--font-sans)",
+          "color-sidebar-line": "var(--sidebar-line)",
+          "color-sidebar-ring": "var(--sidebar-ring)",
+          "color-sidebar-border": "var(--sidebar-border)",
+          "color-sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+          "color-sidebar-accent": "var(--sidebar-accent)",
+          "color-sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+          "color-sidebar-primary": "var(--sidebar-primary)",
+          "color-sidebar-foreground": "var(--sidebar-foreground)",
+          "color-sidebar": "var(--sidebar)",
+          "color-chart-5": "var(--chart-5)",
+          "color-chart-4": "var(--chart-4)",
+          "color-chart-3": "var(--chart-3)",
+          "color-chart-2": "var(--chart-2)",
+          "color-chart-1": "var(--chart-1)",
+          "color-line": "var(--line)",
+          "color-field": "var(--field)",
+          "color-ring": "var(--ring)",
+          "color-input": "var(--input)",
+          "color-border": "var(--border)",
+          "color-destructive": "var(--destructive)",
+          "color-accent-foreground": "var(--accent-foreground)",
+          "color-accent": "var(--accent)",
+          "color-muted-foreground": "var(--muted-foreground)",
+          "color-muted": "var(--muted)",
+          "color-secondary-foreground": "var(--secondary-foreground)",
+          "color-secondary": "var(--secondary)",
+          "color-primary-foreground": "var(--primary-foreground)",
+          "color-primary": "var(--primary)",
+          "color-popover-foreground": "var(--popover-foreground)",
+          "color-popover": "var(--popover)",
+          "color-card-foreground": "var(--card-foreground)",
+          "color-card": "var(--card)",
+          "color-foreground": "var(--foreground)",
+          "color-background": "var(--background)",
+          "radius-sm": "calc(var(--radius) * 0.6)",
+          "radius-md": "calc(var(--radius) * 0.8)",
+          "radius-lg": "var(--radius)",
+          "radius-xl": "calc(var(--radius) * 1.4)",
+          "radius-2xl": "calc(var(--radius) * 1.8)",
+          "radius-3xl": "calc(var(--radius) * 2.2)",
+          "radius-4xl": "calc(var(--radius) * 2.6)",
+          "font-sans": "'Atkinson Hyperlegible', ui-sans-serif, system-ui, sans-serif",
+          "font-mono": "'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
+        },
+        "light": {
+          "surface": "oklch(0.938 0.0046 78.3)",
+          "surface-raised": "oklch(0.86 0.005 78.3)",
+          "surface-foreground": "oklch(0.145 0 0)",
+          "surface-muted-foreground": "oklch(0.505 0 0)",
+          "surface-line": "oklch(0 0 0 / 12%)",
+          "background": "oklch(1 0 0)",
+          "foreground": "oklch(0.145 0 0)",
+          "card": "var(--surface)",
+          "card-foreground": "var(--surface-foreground)",
+          "popover": "var(--surface)",
+          "popover-foreground": "var(--surface-foreground)",
+          "primary": "oklch(0.205 0 0)",
+          "primary-foreground": "oklch(0.985 0 0)",
+          "secondary": "oklch(0.90 0 0)",
+          "secondary-foreground": "oklch(0.205 0 0)",
+          "muted": "oklch(0.90 0 0)",
+          "muted-foreground": "oklch(0.505 0 0)",
+          "accent": "oklch(0.90 0 0)",
+          "accent-foreground": "oklch(0.205 0 0)",
+          "destructive": "oklch(0.577 0.245 27.325)",
+          "border": "transparent",
+          "input": "transparent",
+          "line": "oklch(0.922 0 0)",
+          "field": "var(--surface)",
+          "ring": "oklch(0.708 0 0)",
+          "chart-1": "oklch(0.87 0 0)",
+          "chart-2": "oklch(0.556 0 0)",
+          "chart-3": "oklch(0.439 0 0)",
+          "chart-4": "oklch(0.371 0 0)",
+          "chart-5": "oklch(0.269 0 0)",
+          "radius": "0rem",
+          "sidebar": "var(--surface)",
+          "sidebar-foreground": "var(--surface-foreground)",
+          "sidebar-primary": "oklch(0.205 0 0)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "var(--surface-raised)",
+          "sidebar-accent-foreground": "var(--surface-foreground)",
+          "sidebar-border": "transparent",
+          "sidebar-line": "var(--surface-line)",
+          "sidebar-ring": "oklch(0.708 0 0)"
+        },
+        "dark": {
+          "background": "oklch(0.145 0 0)",
+          "foreground": "oklch(0.985 0 0)",
+          "card": "var(--surface)",
+          "card-foreground": "var(--surface-foreground)",
+          "popover": "var(--surface)",
+          "popover-foreground": "var(--surface-foreground)",
+          "primary": "oklch(0.922 0 0)",
+          "primary-foreground": "oklch(0.205 0 0)",
+          "secondary": "oklch(0.269 0 0)",
+          "secondary-foreground": "oklch(0.985 0 0)",
+          "muted": "oklch(0.269 0 0)",
+          "muted-foreground": "oklch(0.708 0 0)",
+          "accent": "oklch(0.269 0 0)",
+          "accent-foreground": "oklch(0.985 0 0)",
+          "destructive": "oklch(0.704 0.191 22.216)",
+          "border": "transparent",
+          "input": "transparent",
+          "line": "oklch(1 0 0 / 10%)",
+          "field": "var(--surface)",
+          "ring": "oklch(0.556 0 0)",
+          "chart-1": "oklch(0.87 0 0)",
+          "chart-2": "oklch(0.556 0 0)",
+          "chart-3": "oklch(0.439 0 0)",
+          "chart-4": "oklch(0.371 0 0)",
+          "chart-5": "oklch(0.269 0 0)",
+          "sidebar": "var(--surface)",
+          "sidebar-foreground": "var(--surface-foreground)",
+          "sidebar-primary": "oklch(0.205 0 0)",
+          "sidebar-primary-foreground": "oklch(0.985 0 0)",
+          "sidebar-accent": "var(--surface-raised)",
+          "sidebar-accent-foreground": "var(--surface-foreground)",
+          "sidebar-border": "transparent",
+          "sidebar-line": "var(--surface-line)",
+          "sidebar-ring": "oklch(0.556 0 0)"
+        }
+      },
+      "css": {
+        "@layer base": {
+          ".bg-card, .bg-popover, .bg-sidebar": {
+            "foreground": "var(--surface-foreground)",
+            "muted": "var(--surface-raised)",
+            "muted-foreground": "var(--surface-muted-foreground)",
+            "accent": "var(--surface-raised)",
+            "accent-foreground": "var(--surface-foreground)",
+            "secondary": "var(--surface-raised)",
+            "secondary-foreground": "var(--surface-foreground)",
+            "primary": "oklch(0.205 0 0)",
+            "primary-foreground": "oklch(0.985 0 0)",
+            "destructive": "oklch(0.577 0.245 27.325)",
+            "ring": "oklch(0.708 0 0)",
+            "line": "var(--surface-line)",
+            "field": "var(--surface-raised)"
+          },
+          ".bg-field": {
+            "foreground": "var(--surface-foreground)",
+            "muted": "var(--surface-raised)",
+            "muted-foreground": "var(--surface-muted-foreground)",
+            "accent": "var(--surface-raised)",
+            "accent-foreground": "var(--surface-foreground)",
+            "secondary": "var(--surface-raised)",
+            "secondary-foreground": "var(--surface-foreground)",
+            "primary": "oklch(0.205 0 0)",
+            "primary-foreground": "oklch(0.985 0 0)",
+            "destructive": "oklch(0.577 0.245 27.325)",
+            "ring": "oklch(0.708 0 0)",
+            "line": "var(--surface-line)"
+          }
+        }
+      }
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "Toast component.",
+      "files": [
+        {
+          "path": "registry/ui/toast.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toast.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "theme"
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "Toggle component.",
+      "files": [
+        {
+          "path": "registry/ui/toggle.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle Group",
+      "description": "Toggle Group component.",
+      "files": [
+        {
+          "path": "registry/ui/toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/toggle-group.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "class-variance-authority",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme",
+        "toggle"
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Tooltip component.",
+      "files": [
+        {
+          "path": "registry/ui/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "components/ui/tooltip.tsx"
+        }
+      ],
+      "dependencies": [
+        "@base-ui/react",
+        "cn"
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    },
+    {
+      "name": "use-mobile",
+      "type": "registry:hook",
+      "title": "Use Mobile",
+      "description": "Use Mobile component.",
+      "files": [
+        {
+          "path": "registry/hooks/use-mobile.ts",
+          "type": "registry:hook",
+          "target": "hooks/use-mobile.ts"
+        }
+      ],
+      "registryDependencies": [
+        "theme"
+      ]
+    }
+  ]
+}
