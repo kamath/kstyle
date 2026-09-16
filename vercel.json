@@ -2,8 +2,8 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "pnpm install --frozen-lockfile",
-  "buildCommand": "pnpm --filter @workspace/ui build-storybook",
-  "outputDirectory": "packages/ui/storybook-static",
+  "buildCommand": "pnpm run build:storybook",
+  "outputDirectory": "storybook-static",
   "headers": [
     {
       "source": "/assets/(.*)",

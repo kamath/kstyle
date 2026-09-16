@@ -7,7 +7,8 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "turbo format",
-    "typecheck": "turbo typecheck"
+    "typecheck": "turbo typecheck",
+    "build:storybook": "pnpm --filter @workspace/ui exec storybook build -o ../../storybook-static"
   },
   "devDependencies": {
     "prettier": "^3.9.6",
