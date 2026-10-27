@@ -31,4 +31,6 @@ dist-ssr
 
 # typescript
 *.tsbuildinfo
-storybook-static
+
+# vercel
+.vercel
