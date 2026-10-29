@@ -78,8 +78,11 @@ Navigation keys (j/k/h/l) are actions too, registered by `useListNav` / pane hoo
 the palette. Use `hidden: true` only for pure aliases (e.g. `ArrowDown` alongside `j` in one action's `keys`
 already covers it — prefer listing all keys on one action over a second hidden one).
 
-Clickable twins for navigation exist naturally: clicking a row selects it, clicking a pane focuses it,
-clicking a section tab switches to it. Row-level actions (delete this one) appear as an `ActionButton`
+Clickable twins for navigation exist naturally: clicking a row opens it, clicking a section switches to it.
+Their keys still need hints, which rows can't carry, so traversal actions declare a `nav` direction (`"up"`,
+`"down"`, `"back"`, `"open"`; `useListNav` and `useBack` already do) and `<KeyBar />`, mounted once along the bottom
+of the app, renders the live ones as `ActionButton`s with all their keys (`j / ↓`). Give a reader's scroll actions
+`nav: "up"` / `"down"` too, so the bar shows them while it has focus. Row-level actions (delete this one) appear as an `ActionButton`
 on the highlighted row only, so hints stay sparse and point at what the key would actually hit.
 
 ## 4. Scopes

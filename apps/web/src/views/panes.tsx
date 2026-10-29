@@ -60,6 +60,7 @@ export function Pane({
   const keys = active && !!reader;
   useAction({
     id: "reader.down",
+    nav: "down",
     label: "Scroll down",
     keys: ["j", "ArrowDown"],
     group: "Panes",
@@ -69,6 +70,7 @@ export function Pane({
   });
   useAction({
     id: "reader.up",
+    nav: "up",
     label: "Scroll up",
     keys: ["k", "ArrowUp"],
     group: "Panes",

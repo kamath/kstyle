@@ -1,5 +1,5 @@
 import { Button } from "@base-ui/react/button";
-import { atom, useAtom, useSetAtom, type PrimitiveAtom } from "jotai";
+import { atom, useAtom, useAtomValue, useSetAtom, type PrimitiveAtom } from "jotai";
 import {
   createContext,
   Fragment,
@@ -11,7 +11,7 @@ import {
   type MouseEvent,
   type ReactNode,
 } from "react";
-import { btn, type Tone } from "./tw.ts";
+import { btn, buttons, type Tone } from "./tw.ts";
 
 /**
  * Keyboard runtime. An action is defined once with `useAction` and gets two surfaces: its keys (handled by
@@ -35,7 +35,11 @@ export type Action = {
   whenTyping?: boolean;
   /** Live in every scope, not only the innermost (the palette toggle). */
   global?: boolean;
+  /** Directional traversal (move, open, back): shown with its keys in <KeyBar>. */
+  nav?: Direction;
 };
+
+export type Direction = "up" | "down" | "back" | "open";
 
 // The registry is not rendered state, so it lives outside React; the version atom tells the palette to re-read.
 type Entry = { scope: string; ref: { current: Action } };
@@ -221,11 +225,14 @@ export function ActionButton({
   action,
   tone,
   pending,
+  all,
   children,
 }: {
   action: Action;
   tone?: Tone;
   pending?: string | false;
+  /** Show every alternative key (`j / ↓`), not just the first. */
+  all?: boolean;
   children?: ReactNode;
 }) {
   return (
@@ -239,8 +246,28 @@ export function ActionButton({
       }}
     >
       <span>{pending || children || action.label}</span>
-      <Kbd keys={action.keys} />
+      <Kbd keys={action.keys} all={all} />
     </Button>
+  );
+}
+
+/**
+ * The live directional keys (previous, next, back, open) as buttons showing every key for each, so navigation is
+ * as discoverable as any other action. Mount once along the bottom of the app; it follows the focused pane, and
+ * shows nothing while a dialog's scope is on top. Hide it on touch screens, where rows and Back are tapped.
+ */
+export function KeyBar({ className = "" }: { className?: string }) {
+  useAtomValue(registryVersionAtom);
+  const order: Direction[] = ["up", "down", "back", "open"];
+  const nav = live()
+    .filter((a) => a.nav)
+    .sort((a, b) => order.indexOf(a.nav!) - order.indexOf(b.nav!));
+  return (
+    <div className={`${buttons} min-h-10 bg-bar px-1.5 py-1 ${className}`} aria-label="Navigation keys">
+      {nav.map((a) => (
+        <ActionButton key={a.id} action={a} all />
+      ))}
+    </div>
   );
 }
 
@@ -256,6 +283,7 @@ export function useBack(run: (() => void) | undefined, label = "Back") {
     label,
     keys: ["Escape", "h", "ArrowLeft"],
     group: "Panes",
+    nav: "back",
     enabled: !!run,
     run: () => run?.(),
   });
@@ -315,8 +343,8 @@ export function useListNav<T>({
     });
   const on = active && items.length > 0;
   const group = name;
-  useAction({ id: `${name}.down`, label: "Next", keys: ["j", "ArrowDown"], group, repeat: true, enabled: on, run: () => go((i) => i + 1) });
-  useAction({ id: `${name}.up`, label: "Previous", keys: ["k", "ArrowUp"], group, repeat: true, enabled: on, run: () => go((i) => i - 1) });
+  useAction({ id: `${name}.down`, label: "Next", keys: ["j", "ArrowDown"], group, repeat: true, nav: "down", enabled: on, run: () => go((i) => i + 1) });
+  useAction({ id: `${name}.up`, label: "Previous", keys: ["k", "ArrowUp"], group, repeat: true, nav: "up", enabled: on, run: () => go((i) => i - 1) });
   useAction({ id: `${name}.top`, label: "First", keys: ["g g"], group, enabled: on, run: () => go(() => 0) });
   useAction({ id: `${name}.bottom`, label: "Last", keys: ["G"], group, enabled: on, run: () => go(() => items.length - 1) });
   useAction({
@@ -324,6 +352,7 @@ export function useListNav<T>({
     label: openLabel,
     keys: openKeys,
     group,
+    nav: "open",
     enabled: on && !!onOpen,
     run: () => current && onOpen?.(current),
   });

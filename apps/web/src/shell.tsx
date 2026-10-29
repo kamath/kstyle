@@ -2,7 +2,7 @@ import { Outlet } from "@tanstack/react-router";
 import { useAtom } from "jotai";
 import { useEffect, type ReactNode } from "react";
 import { sectionCursorAtom, themeAtom, type SectionId } from "./state.ts";
-import { ActionButton, Kbd, KeyRoot, RegisterAction, useAction, type Action } from "./ui/keys.tsx";
+import { ActionButton, Kbd, KeyBar, KeyRoot, RegisterAction, useAction, type Action } from "./ui/keys.tsx";
 import { Palette, paletteAction } from "./ui/palette.tsx";
 import { toast } from "./ui/toast.tsx";
 import { buttons, pane } from "./ui/tw.ts";
@@ -60,45 +60,49 @@ export function Shell() {
   const active = !section;
 
   return (
-    <div className="flex h-full max-md:flex-col">
-      <KeyRoot />
-      <Palette />
-      {sectionActions.map((a) => (
-        <RegisterAction key={a.id} action={a} />
-      ))}
+    // The panes, then the key bar for whichever pane is focused (not on phones, where rows and Back are tapped).
+    <div className="grid h-full grid-rows-[minmax(0,1fr)_auto]">
+      <div className="flex min-h-0 max-md:flex-col">
+        <KeyRoot />
+        <Palette />
+        {sectionActions.map((a) => (
+          <RegisterAction key={a.id} action={a} />
+        ))}
 
-      <nav
-        aria-label="Sections"
-        className={`${pane} flex flex-col bg-pane md:w-[17rem] md:shrink-0 ${active ? "" : "max-md:hidden"}`}
-        data-focused={active ? "" : undefined}
-      >
-        <header className="flex flex-col px-3.5 pt-4 pb-3 *:py-1">
-          <h1 className="font-mono font-semibold">kstyle</h1>
-          <p className="text-muted">
-            An agent skill that makes the React apps your coding agent builds look and work like this site.
-          </p>
-        </header>
-        <List
-          name="Sections"
-          items={sections}
-          keyOf={(s) => s.id}
-          cursorAtom={sectionCursorAtom}
-          active={active}
-          onOpen={(s) => go(s.id)}
-          row={(s) => (
-            <>
-              <span className="flex-1">{s.label}</span>
-              <Kbd keys={[String(sections.indexOf(s) + 1)]} />
-            </>
-          )}
-        />
-        <div className="flex flex-1 flex-col justify-end py-1.5 *:justify-between">
-          <ActionButton action={flip} />
-          <ActionButton action={paletteAction}>All commands</ActionButton>
-        </div>
-      </nav>
+        <nav
+          aria-label="Sections"
+          className={`${pane} flex flex-col bg-pane md:w-[17rem] md:shrink-0 ${active ? "" : "max-md:hidden"}`}
+          data-focused={active ? "" : undefined}
+        >
+          <header className="flex flex-col px-3.5 pt-4 pb-3 *:py-1">
+            <h1 className="font-mono font-semibold">kstyle</h1>
+            <p className="text-muted">
+              An agent skill that makes the React apps your coding agent builds look and work like this site.
+            </p>
+          </header>
+          <List
+            name="Sections"
+            items={sections}
+            keyOf={(s) => s.id}
+            cursorAtom={sectionCursorAtom}
+            active={active}
+            onOpen={(s) => go(s.id)}
+            row={(s) => (
+              <>
+                <span className="flex-1">{s.label}</span>
+                <Kbd keys={[String(sections.indexOf(s) + 1)]} />
+              </>
+            )}
+          />
+          <div className="flex flex-1 flex-col justify-end py-1.5 *:justify-between">
+            <ActionButton action={flip} />
+            <ActionButton action={paletteAction}>All commands</ActionButton>
+          </div>
+        </nav>
 
-      <Outlet />
+        <Outlet />
+      </div>
+      <KeyBar className="max-md:hidden" />
     </div>
   );
 }

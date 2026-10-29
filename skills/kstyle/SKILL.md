@@ -45,7 +45,8 @@ meaning, and fully drivable from the keyboard. Every rule below serves one of th
 6. **Run the review checklist** at the bottom before calling it done.
 
 Drop-in starting points live in `assets/`, extracted from a working app and tested keyboard-only:
-- `keys.tsx` — keyboard runtime: `useAction`, `KeyScope`, `KeyRoot`, `ActionButton`, `Kbd`, `useListNav`
+- `keys.tsx` — keyboard runtime: `useAction`, `KeyScope`, `KeyRoot`, `ActionButton`, `Kbd`, `useListNav`, `useBack`,
+  `KeyBar`
 - `palette.tsx` — the ⌘K / `:` command palette (Base UI Dialog + Autocomplete)
 - `ui.tsx` — `Query` (renders every query state), `Modal`, `Confirm`, `TextField`, `useSubmit`/`SubmitButton`
 - `toast.tsx` — Base UI Toast with a module-level manager, so mutation callbacks can toast
@@ -54,7 +55,7 @@ Drop-in starting points live in `assets/`, extracted from a working app and test
 - `tw.ts` — class recipes used by more than one component (`btn`, `input`, `pane`, `item`, `tab`, `state`, `modal`)
 
 Copy them into the project and adapt. They're written to be read and edited, not treated as a black box.
-Mount `<KeyRoot />`, `<Palette />` and `<ToastProvider>` once at the root.
+Mount `<KeyRoot />`, `<Palette />`, `<KeyBar />` and `<ToastProvider>` once at the root.
 
 ## Starting from scratch
 
@@ -219,6 +220,10 @@ surrounding text color, so it reads on any fill in either mode.
   (`D` delete the whole thing). Destructive actions confirm via AlertDialog where `Enter`/`y` confirms and `Esc`/`n` cancels.
 - **`:` and `mod+k` open the command palette**, which lists *every* action and navigation available in the
   current context, each with its key. The palette is the discoverability layer, not a separate command language.
+- **Directional keys get hints too.** A key bar along the bottom of the app (`<KeyBar />`) shows the focused
+  pane's traversal as buttons with every key: Previous `k / ↑`, Next `j / ↓`, Back `Esc / h / ←`, Open `↵ / l / →`
+  (Scroll in a reader). It reads the live actions (those with a `nav` direction), so it follows focus and can't
+  drift from what the keys do. It's hidden below `48rem`, where rows and Back are tapped.
 - **Parity both ways.** Every keybinding has a clickable control that shows its hint (`<Kbd>`), and every
   clickable thing has a keybinding. Implement both from the same action definition (`useAction` +
   `ActionButton`) so they can't drift apart.
@@ -252,7 +257,7 @@ Before finishing, check each item honestly; fix rather than rationalize.
 
 - [ ] Can every screen be fully used with the mouse unplugged? Walk it: open, create, delete, navigate, close every dialog, sign out.
 - [ ] Can every screen be fully used on a 390px-wide phone by touch alone? One pane at a time with Back, every action (the palette too) on a tappable control, nothing hover-only, no horizontal scroll, no zoom when a field is focused.
-- [ ] Does every clickable control show its key hint, and does every key appear in the palette?
+- [ ] Does every clickable control show its key hint, does every key appear in the palette, and does the key bar show the focused pane's hjkl / arrow traversal?
 - [ ] Do `j/k/↑/↓` repeat when held, and does the highlighted row stay in view?
 - [ ] Is there any `border`, decorative `outline`, or border-like `box-shadow`? Remove it.
 - [ ] Is there any `gap`, sibling margin or inset padding between panes, tabs or rows, or any `border-radius`? Make them abut, move spacing into the children, square the corners. Are grouped buttons `gap-2` apart, and are a row's contents spaced with `gap` rather than child padding?
